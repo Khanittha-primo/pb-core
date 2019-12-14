@@ -7,9 +7,10 @@ import javax.servlet.http.HttpServletResponse
 @RestController
 class TestController {
 
-    @GetMapping("/foo")
-    fun test(response: HttpServletResponse) = object {
-        val field = "fooooo"
+    @GetMapping("/api/foo")
+    fun test(response: HttpServletResponse): Any {
+        response.addHeader("Access-Control-Allow-Origin", "*")
+        return object { val value = "foooooooooo" }
     }
 
 }
