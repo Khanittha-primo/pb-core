@@ -14,3 +14,4 @@ class TestEntity {
     var lastName: String? = null
 
 }
+

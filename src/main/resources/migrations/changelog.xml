@@ -9,3 +9,4 @@
     <include file="classpath:migrations/test.xml"/>
 
 </databaseChangeLog>
+
