@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   web:
     build: .
@@ -31,11 +31,11 @@ services:
     container_name: postgres
     image: postgres
     env_file:
-      - db.properties
+      - postgres.env
     volumes:
       - my_dbdata:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - 5432:5432
     networks:
       - postgres
     restart: always
